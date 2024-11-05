@@ -146,32 +146,26 @@ console.log("Opgave 10: " + vowelCheck("a"));
 
 // Opgave 11
 function seasonsCheck(month) {
-  let monthFound;
     switch (month) {
         case "Desember":
         case "Januar":
         case "Februar":
-          monthFound = "Vinter";
-          break;
+          return "Vinter";
         case "Mars":
         case "April":
         case "Mai":
-          monthFound = "Vår";
-          break;
+          return "Vår";
         case "Juni":
         case "Juli":
         case "August":
-          monthFound = "Sommer";
-          break;
+          return "Sommer";
         case "September":
         case "Oktober":
         case "November":
-          monthFound = "Høst";
-          break;
+          return "Høst";
         default:
             return "Ikke en måned";
       }
-      return monthFound;
 }
 console.log("Opgave 11: "+seasonsCheck("Mai"));
 
