@@ -51,6 +51,7 @@ function weekDays(text) {
 }
 console.log("Opgave 3: ");
 weekDays("tuesday");
+//For next time: use toLowerCase() or toUpperCase() so no matter the casing, its still hitting a case
 
 
 // Opgave 4)
@@ -60,17 +61,18 @@ function sameLetter(text) {
   } else {
     return "no it's not the same";
   }
-}
+} 
 console.log("Opgave 4: "+sameLetter("this is a nice text"));
 
 
 // Opgave 5)
 function searchList(text, list) {
-    if(list.includes(text)){
-        return true;
-    } else {
-        return false;
-    }
+  return list.includes(text) ? true : false;
+    // if(list.includes(text)){
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 }
 console.log("Opgave 5: "+searchList("sol", ["sol", "regn", "vind", "snø"]));
 
