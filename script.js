@@ -1,12 +1,12 @@
 // Opgave 1)
-function splitReverseText(text) {
+function splitTextInHalf(text) {
   let midIndex = text.length / 2;
   midIndex = midIndex.toFixed(0);
   let firstPart = text.slice(0, midIndex);
   let secondPart = text.slice(midIndex);
   return secondPart + firstPart;
 }
-console.log("Opgave 1: " + splitReverseText("This dis a very good good good test"));
+console.log("Opgave 1: " + splitTextInHalf("This dis a very good good good test"));
 
 
 // Opgave 2)
