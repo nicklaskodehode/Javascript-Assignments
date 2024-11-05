@@ -6,7 +6,7 @@ function splitTextInHalf(text) {
   let secondPart = text.slice(midIndex);
   return secondPart + firstPart;
 }
-console.log("Opgave 1: " + splitTextInHalf("This dis a very good good good test"));
+console.log("Opgave 1: " + splitTextInHalf("This is a very good good good test"));
 
 
 // Opgave 2)
@@ -146,26 +146,32 @@ console.log("Opgave 10: " + vowelCheck("a"));
 
 // Opgave 11
 function seasonsCheck(month) {
+  let monthFound;
     switch (month) {
         case "Desember":
         case "Januar":
         case "Februar":
-          return "Vinter";
+          monthFound = "Vinter";
+          break;
         case "Mars":
         case "April":
         case "Mai":
-          return "Vår";
+          monthFound = "Vår";
+          break;
         case "Juni":
         case "Juli":
         case "August":
-          return "Sommer";
+          monthFound = "Sommer";
+          break;
         case "September":
         case "Oktober":
         case "November":
-        
+          monthFound = "Høst";
+          break;
         default:
             return "Ikke en måned";
       }
+      return monthFound;
 }
 console.log("Opgave 11: "+seasonsCheck("Mai"));
 
