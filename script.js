@@ -67,7 +67,7 @@ console.log("Opgave 4: "+sameLetter("this is a nice text"));
 
 // Opgave 5)
 function searchList(text, list) {
-  return list.includes(text) ? true : false;
+  return list.includes(text);
     // if(list.includes(text)){
     //     return true;
     // } else {
