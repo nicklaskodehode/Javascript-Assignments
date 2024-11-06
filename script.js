@@ -67,7 +67,7 @@ console.log("Opgave 4: "+sameLetter("this is a nice text"));
 
 // Opgave 5)
 function searchList(text, list) {
-  return list.includes(text);
+  return list.includes(text); 
     // if(list.includes(text)){
     //     return true;
     // } else {
@@ -81,7 +81,7 @@ console.log("Opgave 5: "+searchList("sol", ["sol", "regn", "vind", "snø"]));
 function kombineretOrd(list) {
   let firstWord = list.shift();
   let lastWord = list.pop();
-  return firstWord + lastWord;
+  return firstWord + lastWord; // or firstWord.concat(lastWord);
 }
 console.log("Opgave 6: " + kombineretOrd(["one", "two", "three", "four", "five"]));
 
@@ -126,22 +126,29 @@ console.log("Opgave 9: " + ageCheck(20));
 
 // Opgave 10
 function vowelCheck(letter) {
-  if (letter.length != 1) {
-    console.log("You have to put only 1 letter");
+  //2 ways to make this
+  let vowelList = ["a","e","i","o","u","y"];
+  if (vowelList.includes(letter)){
+    return "It's a vowel";
   } else {
-    if (
-      letter === "a" ||
-      letter === "e" ||
-      letter === "i" ||
-      letter === "o" ||
-      letter === "u" ||
-      letter === "y"
-    ) {
-      return "This is a vowel";
-    } else {
-      return "This is not a vowel";
-    }
+    return "its a contant"
   }
+  // if (letter.length != 1) {
+  //   console.log("You have to put only 1 letter");
+  // } else {
+  //   if (
+  //     letter === "a" ||
+  //     letter === "e" ||
+  //     letter === "i" ||
+  //     letter === "o" ||
+  //     letter === "u" ||
+  //     letter === "y"
+  //   ) {
+  //     return "This is a vowel";
+  //   } else {
+  //     return "This is not a vowel";
+  //   }
+  // }
 }
 console.log("Opgave 10: " + vowelCheck("a"));
 
