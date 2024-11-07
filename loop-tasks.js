@@ -107,14 +107,7 @@ console.log(words);
 console.log("Middels -------");
 console.log("Opgave 10 -----");
 //Opgave 10 
-// for (let index = 0; index < array.length; index++) {
-//     const element = array[index];
-    
-// }
-
-
 //1,2,3,5,8,13,21,34,55
-//Opgave 11
 let numb1 = 0;
 let numb2 = 1;
 let numbSum;
@@ -124,6 +117,11 @@ for (let i = 1; i <= 10; i++) {
     numb2 = numbSum;
     console.log(numbSum);
 }
+
+
+
+//Opgave 11
+
 
 //Opgave 12
 
