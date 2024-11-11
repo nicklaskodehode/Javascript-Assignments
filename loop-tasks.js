@@ -194,15 +194,16 @@ function printPrime(max) {
   }
 }
 
+
 //Opgave 14
 console.log("Opgave 14 ------");
-let numberList = [6, 2,5,3,10,55,33,7,12,43,68,54,99,93];
-
+let numberList = [6,2,99,5,3,10,55,33,7,12,43,68,54,93,9];
+console.log(numberList);
 for (let i = 0; i <= numberList.length; i++) {
-  console.log("i checked " + i + " " + "numberlist: " + numberList[i]);
+  // console.log("i checked " + i + " " + "numberlist: " + numberList[i]);
   for (let j = i+1; j <= numberList.length+1; j++) {
     if(typeof numberList[j] !== 'undefined'){
-      console.log("j checked " + j + " " + "numberlist: " + numberList[j]);
+      // console.log("j checked " + j + " " + "numberlist: " + numberList[j]);
       if (numberList[i]>numberList[j]) {
         let tempNumb;
         tempNumb = numberList[i];
@@ -210,7 +211,6 @@ for (let i = 0; i <= numberList.length; i++) {
         numberList[j] = tempNumb; 
       }
     }
-   
   }
 }
  console.log(numberList);
