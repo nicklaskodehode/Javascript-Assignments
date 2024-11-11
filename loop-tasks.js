@@ -107,6 +107,7 @@ function checkDublicate(words) {
 }
 console.log(checkDublicate(words));
 
+
 //Opgave 11 - Extra opgave
 console.log("Opgave 11 -----");
 let number1 = 10;
@@ -116,8 +117,7 @@ switchNumb = number1;
 number1 = number2;
 number2 = switchNumb;
 
-console.log(number1, number2)
-
+console.log(number1, number2);
 
 
 console.log("Opgave 12 -----");
@@ -133,8 +133,6 @@ for (let i = 1; i <= 10; i++) {
   numb2 = numbSum;
 }
 
-
-
 //Opgave 13
 console.log("Opgave 13 ------");
 //hvis tal kan deles KUN med sig selv og 1 er det et primtal
@@ -146,49 +144,37 @@ function CheckPrimtall(tal) {
     // console.log(tal % 2);
     // console.log("Not prime");
     return false;
-  } 
-  else 
-  {
+  } else {
     let primtal = [];
     // console.log(tal);
     let isTalPrime = false;
-    let target = Math.floor(tal/2);
-    for (let i = 3; i <= target; i += 2) 
-        {
-    //   console.log("i: " + i);
-      
-      if (primtal.length === 0) 
-        {
+    let target = Math.floor(tal / 2);
+    for (let i = 3; i <= target; i += 2) {
+      // console.log("i: " + i);
+
+      if (primtal.length === 0) {
         primtal.push(i); //kun på første iteration
-      } 
-      else 
-      {
+      } else {
         let prevPrimeFound = true;
 
-        for (let j = 0; j <= primtal.length; j++) 
-            {
-        //   console.log("index j: " + j);
+        for (let j = 0; j <= primtal.length; j++) {
+          //   console.log("index j: " + j);
 
-          if (i % primtal[j] === 0) 
-            {
+          if (i % primtal[j] === 0) {
             // console.log("Not prime "+ i);
             prevPrimeFound = false;
-          } 
-          else 
-          {
+          } else {
             // console.log("possible prime "+i);
           }
         }
-        if(i === target && prevPrimeFound === true)
-            {
-            isTalPrime = true;
-            // console.log("Prime");
-        } 
-        if (prevPrimeFound === true) 
-            {
+        if (i === target && prevPrimeFound === true) {
+          isTalPrime = true;
+          // console.log("Prime");
+        }
+        if (prevPrimeFound === true) {
           primtal.push(i);
-        //   console.log("Prime");
-        } 
+          //   console.log("Prime");
+        }
       }
     }
 
@@ -198,21 +184,35 @@ function CheckPrimtall(tal) {
   }
 }
 
-printPrime(100)
+printPrime(100);
 function printPrime(max) {
-
-   for (let i = 0; i < max; i++) {
-        let result = CheckPrimtall(i);
-        if (result) {
-            console.log(i);
-        }    
-   }
+  for (let i = 0; i < max; i++) {
+    let result = CheckPrimtall(i);
+    if (result) {
+      console.log(i);
+    }
+  }
 }
-
 
 //Opgave 14
 console.log("Opgave 14 ------");
+let numberList = [6, 2,5,3,10,55,33,7,12,43,68,54,99,93];
 
+for (let i = 0; i <= numberList.length; i++) {
+  console.log("i checked " + i + " " + "numberlist: " + numberList[i]);
+  for (let j = i+1; j <= numberList.length+1; j++) {
+    if(typeof numberList[j] !== 'undefined'){
+      console.log("j checked " + j + " " + "numberlist: " + numberList[j]);
+      if (numberList[i]>numberList[j]) {
+        let tempNumb;
+        tempNumb = numberList[i];
+        numberList[i] = numberList[j];
+        numberList[j] = tempNumb; 
+      }
+    }
+   
+  }
+}
+ console.log(numberList);
 
 //Opgave 15
-console.log("Opgave 15 ------");
