@@ -241,3 +241,33 @@ console.log(pus);
 
 boble = new Fisk("Torsk", "Jens", true);
 console.log(boble);
+
+
+
+// Static methods
+
+
+// A utility class doesnt have a constructor, but all methods are static
+class math {
+    static add(numb1, numb2){
+        return numb1 + numb2;
+    }
+    static sub(numb1,numb2){
+        return numb1-numb2;
+    }
+    static multi(numb1,numb2){
+        return numb1*numb2;
+    }
+    static div(numb1,numb2){
+        return numb1/numb2;
+    }
+}
+
+console.log(math.add(4,8));
+console.log(math.sub(4,1));
+console.log(math.multi(4,2));
+console.log(math.div(15,5));
+
+
+
+
