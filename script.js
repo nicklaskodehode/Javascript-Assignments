@@ -1,3 +1,5 @@
+console.log("Scripts Opgave---------------------------");
+
 // Opgave 1)
 function splitTextInHalf(text) {
   let midIndex = text.length / 2;
